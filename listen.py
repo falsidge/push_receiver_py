@@ -1,6 +1,6 @@
 
 import asyncio
-import src
+from . import register, listen
 import json
 import aiohttp
 
@@ -10,7 +10,7 @@ with open("cred.json") as f:
 
 async def main():
     async with aiohttp.ClientSession() as session:
-        client = await src.listen(session, credentials) 
+        client = await listen(session, credentials) 
         with client:
             while True:
                 recv = await client.recv()
