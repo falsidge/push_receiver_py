@@ -1,4 +1,3 @@
 cryptography
 aiohttp
 http_ece
-protobuffer
